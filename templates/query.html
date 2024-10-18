@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block main %}
+    <h1>Welcome to WeatherTracker!</h1>
+    <h3>Please enter a City </h3>
+    <form action="/" method="post">
+        <div class="mb-3">
+            <input autocomplete="on" class="form-control mx-auto w-auto" name="city" placeholder="ex. London" type="text">
+        </div>
+        <button class="btn btn-primary" type="submit">Search</button>
+
+    </form>
+    
+{% endblock %}

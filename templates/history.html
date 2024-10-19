@@ -5,26 +5,30 @@
     {% endblock %}
 
 {% block main %}
-    <table class="table">
+<h1 class="mb-4">Search History</h1>
+<div class="table-responsive">
+    <table class="table table-hover">
         <thead>
             <tr>
-                <th>Name</th>
-                <th>Temperature</th>
-                <th>Icon</th>
-                <th>Time of Search</th>
+                <th class="text-center align-middle p-1">Name</th>
+                <th class="text-center align-middle p-1">Temperature</th>
+                <th class="text-center align-middle p-1">Event</th>
+                <th class="text-center align-middle p-1 d-none d-sm-table-cell">Time of Search</th>
             </tr>
         </thead>
         <tbody>
             {% for entry in data %}
             <tr>
-                <td>{{ entry.name }}</td>
-                <td>{{ entry.temp }}°C</td>
-                <td>
-                    <img src="{{ URL + entry.icon + URL2 }}" alt="Weather Icon">
+                <td class="text-center align-middle p-1">{{ entry.name }}</td>
+                <td class="text-center align-middle p-1">{{ entry.temp }}°C</td>
+                <td class="text-center align-middle p-1">
+                    <img src="{{ URL + entry.icon + URL2 }}" alt="Weather Icon" class="img-fluid" style="max-width: 50px; height: auto;">
                 </td>
-                <td>{{ entry.time_of_search }}</td>
+                <td class="text-center align-middle p-1 d-none d-sm-table-cell">{{ entry.time_of_search }}</td>
             </tr>
             {% endfor %}
         </tbody>
     </table>
+</div>
+
 {% endblock %}

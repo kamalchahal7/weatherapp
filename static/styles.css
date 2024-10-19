@@ -19,3 +19,9 @@ footer {
     max-width: 100px;
     box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8); /* Darker shadow */
 }
+@media (min-width: 320px) {
+    .table th, .table td {
+        padding: 0.1rem; /* Adjust this value as needed */
+    }
+}
+

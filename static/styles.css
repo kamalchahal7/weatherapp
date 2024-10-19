@@ -1,8 +1,21 @@
 body {
     font-family: "Garamond", serif;
-    background-image: url('images/sunshine.jpg');
+    background-image: url('sunshine.jpg');
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+}
+
+.container {
+    height: 100vh;
+}
+
+footer {
+    color:gainsboro;
+}
+
+.shadow-custom {
+    max-width: 100px;
+    box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8); /* Darker shadow */
 }

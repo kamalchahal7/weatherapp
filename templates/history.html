@@ -1,0 +1,30 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Search History
+    {% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Temperature</th>
+                <th>Icon</th>
+                <th>Time of Search</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for entry in data %}
+            <tr>
+                <td>{{ entry.name }}</td>
+                <td>{{ entry.temp }}°C</td>
+                <td>
+                    <img src="{{ URL + entry.icon + URL2 }}" alt="Weather Icon">
+                </td>
+                <td>{{ entry.time_of_search }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
